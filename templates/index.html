@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+ 
+<head>   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/css/easyzoom.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/src/easyzoom.js"></script>
+
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+      
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+      
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+     
+    <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
+      
+    
+</head> 
+<div class="container">
+<h1 class="text-center my-3" >Gold Always Fits!!</h1>
+<h6 class="text-center ">A Leading Gold Beads Company. Provides Best Of Gold Beads And Many More.</h6>
+</div>
+<br>
+<div class="container my-0">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active my-0">
+      <img src="/static/img/10.jpg" class="d-block " width="1200" height="600" alt="...">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/11.jpg" class="d-block " width="1200" height="600" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/12.jpg" class="d-block " width="1200" height="600" alt="...">
+    </div>
+    
+  </div>
+</div>
+
+<style>
+
+.new:hover
+{
+    transition:all 0.5s; /* Change Speed */
+    -ms-transform: scale(2, 2); /* IE 9 */
+    -webkit-transform: scale(2, 2); /* Safari */
+    transform: scale(2, 2); /* Change Size */
+    z-index:1 !important; /* you can change it, but better let this in default */
+}
+hr.n1 {
+  border: 1px solid black;
+  margin: 0 auto 16px;
+  width: 100px;
+}
+
+img.base{
+  margin-bottom: 50px
+}
+.PDvGL {
+  
+    border-radius: 3px;
+    color: #fff;
+    background-color: #696b6b;
+    text-transform: uppercase;
+    padding: 13px 55px;
+    white-space: nowrap;
+}
+
+
+#leftbox {
+  float:left; 
+  width:33%;
+  height:280px;
+            }
+  #middlebox{
+      float:left; 
+      width:37%;
+      height:280px;
+  }
+#rightbox{
+  float:right;
+  width:30%;
+  height:280px;
+            }
+  </style>
+  
+<body> 
+    <div id="demo" class="container">
+    <h2 class="text-center my-3">Welcome</h2>
+      <div class="row">
+            {% for dsin in dsins %}
+            <div class="col-sm-4">
+                  <div class='new'>
+                    <img src="{{dsin.image.url}}" width="350" height="200" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="destination_content">
+								        <div class="destination_title; text-center ; font-weight-bold">{{dsin.name}}</div>
+                        <div class="destination_subtitle ; text-center "><p>{{dsin.description}}</p></div>
+                    </div>
+                </div>
+                </div>
+            {% endfor %} 
+      </div>
+    </div>
+    
+
+  <div class='container-full'>
+  <hr class="n1" >
+      <h3 class='text-center'>About Us</h3>
+      <p style="font-family:verdana">Thanks to our rich experience of more than 15 years in the Jewel Gold industry, 
+      we have achieved a successful status in the domestic and national arena. 
+      The vast majority of industry knowledge has enabled us to provide our clients with quality products.
+       All of this has increased our market value and therefore made us more selective in our clients.</p>
+      
+    <p style="font-family:verdana">We offer a full line of 70+ Indian gold beads, artificial beads, gemset beads. 
+    If you have requirements for a custom gold design or white gold parts that we do not carry,
+     please call us and we will assist you with your custom order from construction to production....<a href='about'>Know More</a></p>
+     <br>
+     <br>
+     <hr class="n1" >
+     <h3 class='text-center'>Contact Us</h3>
+     
+     </div>
+     
+     <div class="carousel-inner">
+    <div class="carousel-item active my-0">
+    <a href="https://maps.app.goo.gl/bA4cER4mc5hN5mSf8" target=blank>
+      <img class='base' src='/static/img/location.png' height='550' width='1100'alt="..."></a>
+      </div>
+    </div>
+    
+    <div class='container-full' id = "leftbox">
+    <h4>Contact</h4>
+     <div>
+      <a target="blank" id="action-list-1" href="tel:+91-91413-40552" data-tracking-element-type="2" jslog="// LINT.IfChange(PostCTAType)56037; track:impression,click" itemprop="telephone" >
+        <button class= " PDvGL" type='submit'>Call Now</button></a>
+        <div class='container-full'>
+        <br>
+        <h5 style="font-size:17px">094143 40552</h5>
+        <h5 style="font-size:17px">098285 11441</h5>
+        </div>
+      </div>
+     </div>
+
+    <div class='container-full' id = "middlebox">
+      <h4 >Address</h4>
+        <div>
+          <a target="blank" id="action-list-1" href="https://maps.app.goo.gl/bA4cER4mc5hN5mSf8" data-tracking-element-type="2" jslog="// LINT.IfChange(PostCTAType)56037; track:impression,click" itemprop="telephone" >
+            <button class= " PDvGL" type='submit'>Get Directions</button></a>
+            <div class='container-full'>
+          <br>
+        <address>
+          <div style="font-size:17px">120, Behind New Mandi, Bhartiya Colony,</div>
+          <div style="font-size:17px">Hindaun City,</div>
+          <div style="font-size:17px">Rajasthan 322230,</div>
+          <div style="font-size:17px">India</div>
+        </address>
+      </div>
+    </div>
+    </div>
+    
+  <div class='container-full' id="rightbox">
+    <h4 >Opening Hours</h4>
+      <br>
+        <div>
+        <table itemprop="openingHours">
+        <tbody>
+          <tr><th>Mon: </th><td ><span>10:00 am – 9:00 pm</span></td></tr>
+              <tr><th>Tue: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+              <tr><th >Wed: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+              <tr><th >Thu: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+              <tr><th>Fri: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+              <tr><th >Sat: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+              <tr><th>Sun: </th><td ><span >10:00 am – 9:00 pm</span></td></tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
+</body>
+
+{% endblock body %}

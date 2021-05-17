@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Get Quote{% endblock title %}
+
+{% block body %}
+
+<style>
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+</style>
+<body>
+<div class="container-full">
+    <img src="/static/img/get_quote.png" class="d-block w-100" alt="...">
+</div>
+<div class="container">
+    <h1 class='text-center'>Get Quote</h1>
+    <form method='Post' action='\get_quote'>
+        {% csrf_token %}
+        <div class="form-group my-3">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your name">
+        </div>
+        <div class="form-group my-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your email">
+        </div>
+        <div class="form-group my-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name='phone' placeholder="Enter Your phone number">
+        </div>
+        <div class="form-group my-3 ">
+            <label for="desc" class="form-label">Query</label>
+            <textarea type='textarea' class="form-control" id="desc" name='desc' id='desc'
+                placeholder="What you want to ask about for...." rows="3"></textarea>
+        </div>
+        <button class='btn btn-secondary btn-lg btn-block my-3' type='submit'>Submit</button>
+    </form>
+
+</div>
+</body>
+{% endblock body %}

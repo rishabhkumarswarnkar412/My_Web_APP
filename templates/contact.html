@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<head>   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/css/easyzoom.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/easyzoom@2.5.3/src/easyzoom.js"></script>
+
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+      
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script> 
+      
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+    </script> 
+      
+    <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+    </script> 
+      
+    
+</head>
+<style>
+.PDvGL {
+  
+    border-radius: 3px;
+    color: #fff;
+    background-color: #696b6b;
+    text-transform: uppercase;
+    padding: 13px 55px;
+    white-space: nowrap;
+}
+
+
+#leftbox {
+  float:left; 
+  width:31%;
+  height:280px;
+            }
+#middlebox{
+      float:left; 
+      width:35%;
+      height:280px;
+  }
+#rightbox{
+  float:right;
+  width:30%;
+  height:280px;
+            }
+  </style>
+
+<body>
+<div class='container my-4'>
+<h2>Feel Free to Connect...</h2>
+<div class='container my-3' id = "leftbox">
+    <h4>Contact</h4>
+     <div>
+      <a target="blank" id="action-list-1" href="tel:+91-91413-40552" data-tracking-element-type="2" jslog="// LINT.IfChange(PostCTAType)56037; track:impression,click" itemprop="telephone" >
+        <button class= " PDvGL" type='submit'>Call Now</button></a>
+        <div class='container-full'>
+        <br>
+        <h5 style="font-size:18px"><b>094143 40552</b></h5>
+        <h5 style="font-size:18px"><b>098285 11441</b></h5>
+        </div>
+      </div>
+     </div>
+
+    <div class='container my-3' id = "middlebox">
+      <h4 >Address</h4>
+        <div>
+          <a target="blank" id="action-list-1" href="https://maps.app.goo.gl/bA4cER4mc5hN5mSf8" data-tracking-element-type="2" jslog="// LINT.IfChange(PostCTAType)56037; track:impression,click" itemprop="telephone" >
+            <button class= " PDvGL" type='submit'>Get Directions</button></a>
+            <div class='container-full'>
+          <br>
+        <address><b>
+          <div style="font-size:18px">120, Behind New Mandi, Bhartiya Colony,</div>
+          <div style="font-size:18px">Hindaun City,</div>
+          <div style="font-size:18px">Rajasthan 322230,</div>
+          <div style="font-size:18px">India</div></b>
+        </address>
+      </div>
+    </div>
+    </div>
+    
+  <div class='container my-3' id="rightbox">
+    <h4 >Email</h4>
+        <div>
+          <a target="blank" id="action-list-1" href="mailto:avdanahnd@gmail.com" data-tracking-element-type="2" jslog="// LINT.IfChange(PostCTAType)56037; track:impression,click" itemprop="telephone" >
+            <button class= " PDvGL" type='submit'>Email</button></a>
+            <br>
+            <br>
+            <div style="font-size:18px"><b>Avdanahnd@gmail.com</b></div>
+            <div class='container-full'>
+          <br>
+        
+    </div>
+  </div>
+  </div>
+  
+</body>
+{% endblock body%}
+

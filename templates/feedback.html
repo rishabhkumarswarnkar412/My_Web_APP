@@ -1,0 +1,44 @@
+{% extends 'Base.html' %}
+{% block content%}Feedback{% endblock %}
+
+{% block body %}
+
+<style>
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+</style>
+<body>
+<div class="container-full">
+    <img src="/static/img/feedback.jpg" width="1200" height="600"class="d-block w-100" alt="...">
+</div>
+<div class="container ">
+    <h1 class='text-center'>There is no failure. Only feedback.</h1>
+    <form method='Post' action='\feedback'>
+        {% csrf_token %}
+        <div class="form-group my-2">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your name">
+        </div>
+        <div class="form-group my-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your email">
+        </div>
+        <div class="form-group my-3 ">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea type='textarea' class="form-control" id="feedback" name='feedback' id='feedback'
+                placeholder="Submit your feedback here......" rows="3"></textarea>
+        </div>
+        <button class='btn btn-secondary my-3' type='submit'>Submit</button>
+    </form>
+
+</div>
+</body>
+{% endblock body %}
