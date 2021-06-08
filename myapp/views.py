@@ -5,7 +5,6 @@ from myapp.models import Get_quote, Design, Feedback
 # Create your views here.
 def index(request):
     dsins=Design.objects.all()
-
     return render(request,'index.html',{'dsins':dsins})
     #return HttpResponse('This is HomePage')
 def get_quote(request):

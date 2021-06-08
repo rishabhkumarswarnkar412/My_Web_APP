@@ -26,7 +26,7 @@ class Feedback(models.Model):
    
  
 class Design(models.Model):
-    name= models.CharField(max_length=100)
+    name= models.TextField()
     image= models.ImageField(upload_to='pics')
     description= models.TextField()
 
